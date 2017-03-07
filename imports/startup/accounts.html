@@ -1,0 +1,48 @@
+<!-- <body>
+    {{#if currentUser}}
+        {{> dashboard}}
+    {{else}} -->
+        <!-- {{> register}} -->
+        <!-- {{> login}}
+    {{/if}}
+</body> -->
+
+<!-- <template name="dashboard">
+    <p>You're logged in.</p>
+    <p><a href="#" class="logout">Logout</a></p>
+</template> -->
+
+<!-- <template name="register">
+    <form>
+        <p>Email: <input type="email" name="registerEmail"></p>
+        <p>Password: <input type="password" name="registerPassword"></p>
+        <p><input type="submit" value="Register"></p>
+    </form>
+</template> -->
+<template name="login">
+    {{#if currentUser}}
+        {{currentUser.services.facebook.name}} -
+        {{currentUser.services.facebook.gender}}
+        <button id="logout">Logout</button>
+    {{else}}
+        <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
+    {{/if}}
+</template>
+
+<template name="Google-login">
+    {{#if currentUser}}
+        {{currentUser.services.google.name}} -
+        {{currentUser.services.google.gender}}
+        <button id="logout">Logout</button>
+    {{else}}
+        <button id="google-login" class="btn btn-default"> Login with Googele</button>
+    {{/if}}
+</template>
+
+<!-- <template name="login">
+    <form>
+        <input type="email" name="loginEmail">
+        <input type="password" name="loginPassword">
+        <input type="submit" value="Login">
+    </form>
+</template> -->
